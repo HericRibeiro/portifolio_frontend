@@ -51,17 +51,29 @@ Para personalizar o portfólio, edite o arquivo `src/App.tsx`:
 
 ```
 portfolio-app/
-├── src/
-│   ├── App.tsx          # Componente principal
-│   ├── main.tsx         # Entry point
-│   ├── index.css        # Estilos globais
-│   └── vite-env.d.ts    # TypeScript definitions
-├── public/              # Arquivos estáticos
-├── index.html           # HTML template
-├── package.json         # Dependências
-├── tsconfig.json        # Config TypeScript
-├── vite.config.ts       # Config Vite
-└── tailwind.config.js   # Config Tailwind
+    src/
+    ├── components/
+    │   ├── sections/ 
+    │   │   ├── HeroSection.tsx
+    │   │   ├── ProjectsSection.tsx
+    │   │   ├── SkillsSection.tsx
+    │   │   ├── ContactSection.tsx
+    │   │   └── index.ts
+    │   ├── Navigation.tsx
+    │   ├── Footer.tsx
+    │   ├── MouseGradient.tsx
+    │   ├── ProjectCard.tsx
+    │   ├── SkillCard.tsx
+    │   ├── SocialLinks.tsx
+    │   ├── ScrollIndicator.tsx
+    │   └── index.ts
+    ├── hooks/ 
+    │   └── useMousePosition.ts
+    ├── constants/ 
+    │   └── data.ts
+    ├── types/ 
+    │   └── index.ts
+    └── App.tsx 
 ```
 
 ## 🌐 Deploy
