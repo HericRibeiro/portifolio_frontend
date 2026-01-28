@@ -37,20 +37,11 @@ npm run dev
 - **Tailwind CSS** - Framework CSS
 - **Lucide React** - Ícones
 
-## ✏️ Personalização
-
-Para personalizar o portfólio, edite o arquivo `src/App.tsx`:
-
-- Altere `"Seu Nome"` para seu nome real
-- Atualize `seu@email.com` com seu email
-- Modifique os links do GitHub e LinkedIn
-- Edite os projetos no array `projects`
-- Ajuste as skills no array `skills`
 
 ## 📁 Estrutura do projeto
 
 ```
-portfolio-app/
+portfolio_frontend/
     src/
     ├── components/
     │   ├── sections/ 
@@ -76,51 +67,6 @@ portfolio-app/
     └── App.tsx 
 ```
 
-## 🌐 Deploy
-
-### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm run build
-# Arraste a pasta dist para netlify.com
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Configure o GitHub Pages para usar a pasta dist
-```
-
 ## 📝 Licença
 
 MIT
-
-
-src/
-├── components/          # Componentes reutilizáveis
-│   ├── sections/       # Seções principais da página
-│   │   ├── HeroSection.tsx
-│   │   ├── ProjectsSection.tsx
-│   │   ├── SkillsSection.tsx
-│   │   ├── ContactSection.tsx
-│   │   └── index.ts
-│   ├── Navigation.tsx
-│   ├── Footer.tsx
-│   ├── MouseGradient.tsx
-│   ├── ProjectCard.tsx
-│   ├── SkillCard.tsx
-│   ├── SocialLinks.tsx
-│   ├── ScrollIndicator.tsx
-│   └── index.ts
-├── hooks/              # Custom hooks
-│   └── useMousePosition.ts
-├── constants/          # Constantes e dados estáticos
-│   └── data.ts
-├── types/              # Definições de tipos TypeScript
-│   └── index.ts
-└── App.tsx            # Componente principal
