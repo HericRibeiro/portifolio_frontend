@@ -1,11 +1,12 @@
+import { Routes, Route } from 'react-router-dom';
 import { useMousePosition } from '@/hooks/useMousePosition';
 import { Navigation } from '@/components/Navigation';
 import { MouseGradient } from '@/components/MouseGradient';
-import { HeroSection } from '@/components/sections/HeroSection';
-import { ProjectsSection } from '@/components/sections/ProjectsSection';
-import { SkillsSection } from '@/components/sections/SkillsSection';
-import { ContactSection } from '@/components/sections/ContactSection';
-import { Footer } from '@/components/Footer';
+
+import Home from '@/pages/Home';
+import Login from '@/pages/Login';
+import Admin from './pages/Admin';
+// import { ProtectedRoute } from './routes/ProtectedRoute';
 
 function App() {
   const mousePosition = useMousePosition();
@@ -17,11 +18,12 @@ function App() {
       <div className="fixed inset-0 opacity-[0.015] pointer-events-none mix-blend-overlay noise-overlay" />
 
       <Navigation />
-      <HeroSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
-      <Footer />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin/>}/>
+      </Routes>
     </div>
   );
 }
