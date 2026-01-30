@@ -1,6 +1,7 @@
 import { LoginSection } from '@/components/sections/LoginSection';
 import { useNavigate } from 'react-router-dom';
 import { login } from '@/services/AuthService';
+import { saveToken } from '@/utils/auth';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -9,8 +10,8 @@ export default function Login() {
       try {
         const data = await login({ mail, password });
 
-        localStorage.setItem('token', data.token);
-
+        saveToken(data.token, 2)
+        
         navigate("/admin")
       } catch {
         alert("Email or passwors invalid")

@@ -6,7 +6,7 @@ import { MouseGradient } from '@/components/MouseGradient';
 import Home from '@/pages/Home';
 import Login from '@/pages/Login';
 import Admin from './pages/Admin';
-// import { ProtectedRoute } from './routes/ProtectedRoute';
+import { ProtectedRoute } from './routes/ProtectedRoute';
 
 function App() {
   const mousePosition = useMousePosition();
@@ -22,7 +22,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin/>}/>
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </div>
   );
