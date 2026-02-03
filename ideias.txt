@@ -1,0 +1,2 @@
+1. Decodificar o jwt para identificar a role que é, é so permitir admin
+2. integração da página admin pro backend

@@ -8,9 +8,9 @@ export default function Login() {
 
     async function handleLogin(mail:string, password: string) {
       try {
-        const data = await login({ mail, password });
+        const token = await login({ mail, password });
 
-        saveToken(data.token, 2)
+        saveToken(token, 2)
         
         navigate("/admin")
       } catch {

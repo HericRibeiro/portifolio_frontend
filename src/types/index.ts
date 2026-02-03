@@ -24,3 +24,17 @@ export interface SocialLink {
   href: string;
   icon: LucideIcon;
 }
+
+export interface Visit {
+  ip: string;
+  country: string | null;
+  city: string | null;
+  userAgent: string;
+  visitedAt: string;
+}
+
+export interface DashboardData {
+  totalVisits: number;
+  uniqueVisitsToday: number;
+  visits: Visit[];
+}

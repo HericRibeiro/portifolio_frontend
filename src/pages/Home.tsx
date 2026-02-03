@@ -8,7 +8,13 @@ import { registerVisit } from '@/utils/visit';
 
 export default function Home() {
     useEffect(() => {
-    registerVisit();
+      (async () => {
+        try {
+          await registerVisit();
+        } catch {
+
+        }
+      })();
   }, []);
 
   return (
@@ -21,5 +27,3 @@ export default function Home() {
     </>
   );
 }
-// Validar esse arquivo, no atual momento estou morrendo de sono e não to raciocinando direito
-// Certeza que esse método não deve ser colocado aqui, já que esse arquivo está apenas orquestrando..

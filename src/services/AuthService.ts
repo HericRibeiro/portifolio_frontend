@@ -27,4 +27,3 @@ export async function login(payload: LoginPayload) {
   const response = await api.post('/auth/login', payload);
   return response.data;
 }
-// Validar esse arquivo, no atual momento estou morrendo de sono e não to raciocinando direito

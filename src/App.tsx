@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import { useMousePosition } from '@/hooks/useMousePosition';
-import { Navigation } from '@/components/Navigation';
 import { MouseGradient } from '@/components/MouseGradient';
 
 import Home from '@/pages/Home';
 import Login from '@/pages/Login';
-import Admin from './pages/Admin';
-import { ProtectedRoute } from './routes/ProtectedRoute';
+import Admin from '@/pages/Admin';
+
+import { ProtectedRoute } from '@/routes/ProtectedRoute';
+import { PublicLayout } from '@/layouts/PublicLayout';
+import { AdminLayout } from '@/layouts/AdminLayout';
 
 function App() {
   const mousePosition = useMousePosition();
@@ -17,19 +19,21 @@ function App() {
 
       <div className="fixed inset-0 opacity-[0.015] pointer-events-none mix-blend-overlay noise-overlay" />
 
-      <Navigation />
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+
         <Route
-          path="/admin"
           element={
             <ProtectedRoute>
-              <Admin />
+              <AdminLayout />
             </ProtectedRoute>
           }
-        />
+        >
+          <Route path="/admin" element={<Admin />} />
+        </Route>
       </Routes>
     </div>
   );
