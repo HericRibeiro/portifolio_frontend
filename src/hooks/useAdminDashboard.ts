@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getDashboardData } from '@/services/AdminDashboardService';
+import { getDashboardData } from '@/services/adminDashboardService';
 import { Visit } from '@/types';
 
 interface DashboardData {
