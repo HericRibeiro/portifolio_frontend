@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Automations Platform",
     description: "Automação completa de rotinas longas diarias com integração de APIs, agendamento e monitoramento em tempo real.",
-    image: "../../public/automations.jpg",
+    image: "/automations.jpg",
     tags: ["Python", "Selenium", "Pandas", "Flask"],
     color: "from-purple-500/20 to-pink-500/20",
     structure: [
@@ -227,7 +227,7 @@ def obter_arquivo_recente(pasta, padrao):
   {
     title: "Payment System",
     description: "Sistema full stack de pagamentos via PIX com geração de QR Code dinâmico, backend escalável em NestJS e frontend moderno em React.",
-    image: "../../public/payments.jpg",
+    image: "/payments.jpg",
     tags: ["NestJS", "TypeORM", "PostgreSQL", "React", "Vite", "TypeScript"],
     color: "from-orange-500/20 to-red-500/20",
     structure: [
