@@ -25,11 +25,11 @@ export const ContactSection = () => {
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
               <a 
-                href={`Heric:${CONTACT_INFO.email}`}
-                className="group relative px-8 py-4 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105"
+                href={`mailto:${CONTACT_INFO.email}`}
+                className="group relative w-full sm:w-auto px-6 sm:px-8 py-4 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  <Mail size={20}/>
+                <span className="relative z-10 flex items-center justify-center gap-2 break-all text-sm sm:text-base">
+                  <Mail size={18}/>
                   {CONTACT_INFO.email}
                 </span>
               </a>
