@@ -1,12 +1,25 @@
 import type { LucideIcon } from 'lucide-react';
 
+export interface CodeFile {
+  name: string;
+  language: string;
+  content: string;
+}
+
+export interface CodeFolder {
+  name: string;
+  files: CodeFile[];
+}
+
 export interface Project {
   title: string;
   description: string;
   image: string;
   tags: string[];
   color: string;
+  structure?: CodeFolder[];
 }
+
 
 export interface Skill {
   name: string;
